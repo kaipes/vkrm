@@ -57,7 +57,7 @@ def predict_anomalies(model_path, model_name="AutoEncoderCN.pth", use_saved_pred
     )
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-    print(f"🧠 Инференс модели: {model_name}")
+    print(f"Инференс модели: {model_name}")
 
     if use_saved_preds and model_name in model_to_pred_file:
         y_attack_scores = np.load(model_to_pred_file[model_name])
